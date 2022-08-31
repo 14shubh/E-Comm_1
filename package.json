@@ -7,6 +7,14 @@
     "test": "npm run",
     "start": "nodemon server.js"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/14shubh/E-Comm_1.git"
+  },
   "author": "shubham burghate",
-  "license": "ISC"
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/14shubh/E-Comm_2/issues"
+  },
+  "homepage": "https://github.com/14shubh/E-Comm_2#readme"
 }
