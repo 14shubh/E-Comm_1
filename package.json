@@ -1,0 +1,12 @@
+{
+  "name": "electronic_e-commerce_application",
+  "version": "1.0.0",
+  "description": "basic e-commerce application api for practice",
+  "main": "server.js",
+  "scripts": {
+    "test": "npm run",
+    "start": "nodemon server.js"
+  },
+  "author": "shubham burghate",
+  "license": "ISC"
+}
