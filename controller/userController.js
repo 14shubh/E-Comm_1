@@ -1,4 +1,4 @@
-
+const jwt = require('jsonwebtoken');
 const User = require('../model/userModel');
 
 
@@ -24,7 +24,9 @@ exports.SignIn = (req, res, next)=>{
     let password = req.body.password;
     User.findOne({email:email,password:password}).then((data)=>{
         console.log(data);
-        return res.status(201).json({result:data, message:"Sign In Success"});
+        let payload = {subject:data._id};
+        let token = jwt.sign(payload,'djhkfhzkdhfiufjkbjdc');
+        return res.status(201).json({result:data,token:token, message:"Sign In Success"});
     }).catch((err)=>{
         console.log(err);
         return res.status(501).json({result:err,message:"Something went wrong"});
