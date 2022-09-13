@@ -1,4 +1,4 @@
-const database = require('../config/database_connection');
+// const database = require('../config/database_connection');
 const mongoose = require('mongoose');
 const UserSchema = new mongoose.Schema({
 

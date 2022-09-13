@@ -12,7 +12,7 @@ exports.SignUp = (req, res, next)=>{
     user.password = req.body.password;
     user.save().then((data)=>{
         console.log(data);
-        return res.status(201).json({result:data,message:"Sign Up success"});
+        return res.status(201).json({message:"success",result:data});
     }).catch((err)=>{
         console.log(err);
         return res.status(501).json({error:err,error:"Something went wrong"});
@@ -26,7 +26,7 @@ exports.SignIn = (req, res, next)=>{
         console.log(data);
         let payload = {subject:data._id};
         let token = jwt.sign(payload,'djhkfhzkdhfiufjkbjdc');
-        return res.status(201).json({result:data,token:token, message:"Sign In Success"});
+        return res.status(201).json({result:data,token:token, message:"Success"});
     }).catch((err)=>{
         console.log(err);
         return res.status(501).json({result:err,message:"Something went wrong"});
